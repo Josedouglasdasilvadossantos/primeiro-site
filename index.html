@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://kit.fontawesome.com/eee41f3af6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Radio+Canada:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <title>Site Douglas</title>
+</head>
+
+<body> 
+   <header>
+
+      <div>
+
+         <img src="imagens/instagram.ico" alt="Logo do site"> 
+
+      </div>
+   
+      <ul>
+         <li>
+            <a target="blank" href="https://github.com/Josedouglasdasilvadossantos"> Git-Hub </Git-Hub></a>
+         </li>
+      
+         <li>
+            <a target="blank" href="mailto:teste@teste.com"> Email </a>
+         </li>
+      
+         <li> 
+            <a target="blank" href="https://wa.me/11999999999"> whatsapp </a>
+         </li>
+
+      </ul>
+  
+
+   </header>
+
+<main>
+
+   <section class="container">
+
+       <div class="name">
+
+          <h1> Douglas </h1>
+          <h5> Front-End Developer </h5>
+       
+       </div>   
+
+<div onclick="displayAbout()" id="arrow"> <!--Parte de Animação-->
+
+   <i id="animation" class="fas fa-sort-down"></i>
+
+</div>
+
+<div style="display:none" id="about"> <!-- Animação do botão do java script -->
+   <p> 
+   
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+      Eos quae vel tenetur amet dolorem quod maiores porro, t 
+      emporibus animi delectus hic doloribus placeat fugiat  
+   
+   </p>
+
+</div>
+
+<div class="formulario"> <!-- Criando um formulário -->
+   
+   <div>
+   
+      <p>Deixe seu contato</p>
+   
+   </div>
+   
+   <form action=""> <!--Criando um formulário-->
+   
+       <input type="texto" placeholder="Seu melhor email: ">
+       <button> Enviar </button>
+       
+   </form> 
+   
+</div>
+        
+
+   </section>
+
+</main>
+
+  <script>// Parte de animação do java script
+    function displayAbout() {
+       var arrow = document.getElementById('animation'); //Pega o elemento pelo id
+       arrow.classList.toggle('rotate'); // classe criada no css
+       var display = document.getElementById('about'); //Pega o elemento pelo id
+       display.classList.toggle('active');// classr criada no css
+      } 
+
+  </script>
+
+</body>
+
+</html>
+

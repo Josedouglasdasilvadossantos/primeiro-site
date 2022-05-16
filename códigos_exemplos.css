@@ -1,0 +1,203 @@
+/*  
+
+Grid line = horizontais de baixo para cima
+Grid row  = verticais linhas de lado
+Grid cell = Encontro de grids centrais
+
+
+*/
+
+
+
+
+.grid {
+
+    display: grid;
+    grid-template-rows: 25px 50px 100px 200px; /*Grids de linha */
+    grid-template-rows: repeat(6,100px); /* Repetir todas as cores em tamanhos iguais */
+    grid-template-rows: 50px 75px repeat(4,100px); /* Repetir as duas primeiras com 50px e 75px e as duas ultimas com 100px */
+    grid-template-rows: auto; /* Ele adapta a grid ao tamaho do conteudo */ 
+    grid-template-rows: 1fr 2fr 1fr 3fr; /* Frações de grid nas linhas */
+
+
+    grid-template-columns: 50px 50px 50px 50px; /* Grids de linhas */
+    grid-template-columns: repeat(6,100px); /* 6 Colunas de grid */ 
+    grid-template-columns: 50px 75px repeat(4,100px); /* Repetir as duas primeiras com 50px e 75px e as quatro ultimas com 100px */
+    grid-template-columns: 90px 1fr 2fr repeat(3,1fr);   /* Ficou todo mundo na mesma coluna */
+    grid-template-columns: repeat(2,1fr); /* Ficou todo mundo na mesma coluna */
+    gap:15px;  /* Cria uma margem interna das das linhas e colunas */
+    row-gap: 15px; /* Cria uma distancia somente das linhas */
+    
+    
+    grid-row: 2; /* Mostra que grid está na linha 2*/
+    grid-column: 3; /* Joga a grid para a coluna 3 */
+    /*  */
+
+}
+
+
+
+.grid div {
+
+padding:30px;
+
+}
+
+
+.preto {
+
+    grid-column-start: 1; /* Começa a cor dessa classe preto no 1  */
+    grid-column-end: 4; /* Termina a cor da classe preto no 4 */
+/*  */
+}
+
+
+
+
+
+/* Bordas e sombra */
+
+
+exemplo {
+
+    border: 1px solid; /* borda solida é uma linha continua em ambos os lados */
+    border-bottom: 1px solid firebrick;  /* Border bottom é somente para a parte debaixo */
+    box-shadow: 1px 2px 10px 1px red; /* Borda sombreada */
+    border-bottom: ridge 15px rebeccapurple; /* Borda 3D com opacidade embaixo */ 
+    border-left: 2px dashed white; /* bordas laterais entre elas menos na esquerda */
+    
+     }
+
+exemplo :first-child {
+
+border-left: 2px dashed blue; /* Acrescenta a borda ao somente na lateral da div da esquerda */
+border: thick double blue; /* Cria borda dupla */
+
+}
+
+
+ /* Tipos de back ground */
+background-image: url(./imagens/mar.jpg); Inserindo fundo com imagem */
+background-repeat:initial; */
+background-position: center fixed; */
+background-color: rgb(96, 255, 247); /* Inserir cor de fundo */
+background: linear-gradient(90deg, #c0bfc4, #ebd9a5); /* Criando um linear Gradiente em 90 graus */ 
+
+
+
+
+
+
+background-color (define a cor do fundo);
+background-image (define uma imagem de fundo);
+background-repeat (define a maneira como a imagem de fundo é posicionada);
+background-attachment (define se a imagem de fundo "rola" ou não com a tela);
+background-position (define como e onde a imagem de fundo é posicionada);
+background-clip (define a área do box onde a imagem de fundo é aplicada);
+background-origin (define a posição de origem da imagem no box);
+background-size (define as dimensões da imagem no box);
+background (maneira abreviada para declarar todas as propriedades anteriores).
+background: linear-gradient(90deg, #c0bfc4, #ebd9a5); /* Criando um linear Gradiente em 90 graus */ 
+
+
+
+
+
+height: 100%; /* força o view port preencheer toda largura quando o gradiente ficar cortado */
+width: 100%;  /* força o view port preencheer toda Altura quando o gradiente ficar cortado */
+text-align: center;  /* Alinhar texto ao centro */
+animation: blink 1s steps(5,start) infinite; /* Animação da seta */
+transform: rotate(180deg); /* Rotação em 180 graus */ 
+transition: 300ms; /* Tempo de transição da animação */
+display: block !important; /* sobrepor o inline feito no html e mostrar o display */
+list-style:none; /* Tira qualquer estilo da lista */
+
+    /*  Inserindo uma image de fundo com tela cheia */
+    background-image: url(../Projeto/imagens/mar.jpg);
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-position: center center; /* Centralizar a imagem */
+    background-attachment: fixed; /* Fundo fixo */
+    background-size: cover; /* Tamanho de fundo total */  
+
+
+    border-bottom: 2px dashed rgb(0, 0, 0); /* Borda tracejada embaixo*/
+    border-radius: 10px 0px 0px 10px; /* Esquerda superior,direita superior, direita inferior, esquerda inferior */
+    
+/* Criando um hover */
+
+    .formulario button:hover {
+
+        background-position: left bottom;
+        
+    }
+    
+
+
+
+    width:15%;/* Largura da fonte */
+    padding: 5px 10px; /* Espaço da fonte */
+    background: linear-gradient(to right, rgb(156, 84, 12) 50%,rgb(207, 153, 99) 50%); /* Preenche o gradiente da esquerda para a direita sai de uma cor para a outra */
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: rgb(246, 246, 246);
+    font-weight: 600;  /* Peso da fonte */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Faz aparecer a Mão ao passar o mouse no botão */
+    transition: all 300ms ease-out; /* Transição lenta para fora */
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 5px; /* Margen no topo */
+    margin-left: -5px; /* Margen a direita */
+
+
+
+
+
+
+
+    /* Criando responsividade para ipad */
+
+@media only screen and (max-width: 768px){
+
+    .formulario {
+
+        width: 100%; /*  Ajustando o formulário e o input para ipad*/
+
+
+    }
+
+   
+}
+
+
+
+
+
+
+
+/* Criando uma responsividade para celular */
+
+@media only screen and (max-width: 480px){ 
+    
+    .container .name h1 {
+
+        font-size: 30px;
+    }
+
+
+
+    .container .name h5{
+
+    font-size: 15px;
+
+        
+    }
+
+    #about p{
+
+    max-width: 80%; /* Maximo de largura 80% da tela para o texto */
+    text-align: justify; /* Texto alinhado justificado */
+        
+}
+
+
+}

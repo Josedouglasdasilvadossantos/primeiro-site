@@ -1,0 +1,231 @@
+* {
+
+    padding:0;
+    margin:0;
+     /* É como se ele mantesse somente a soma do box sem padding ou wheihgt */
+    color:darkgoldenrod;
+    
+}
+
+
+.container {
+
+    text-align: center;  /* Alinhar texto ao centro */   
+     /*  */
+}
+
+.container .name h1 {
+
+    font-size: 60px;
+}
+
+.container .name h5 {
+
+    font-size: 25px;
+}
+
+
+#arrow {
+
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5,start) infinite; /* Animação da seta */ 
+
+   }
+
+@keyframes blink {
+
+    to {
+        visibility: hidden; /* Faz a seta perde a visibilidade */
+       }
+
+    }
+
+#animation {
+    transition: 800ms;
+}    
+
+.rotate {
+
+    transform: rotate(180deg); /* Rotação em 180 graus */ 
+    transition: 300ms; /* Tempo de transição da animação */
+/*  */ 
+}   
+
+
+.active {
+
+    display: block !important; /* sobrepor o inline feito no html e mostrar o display */
+}    
+
+#about p {
+
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+
+
+ul {
+
+    list-style:none; /* Tira qualquer estilo da lista */
+    justify-content: space-around
+}
+
+
+
+ a {
+
+    text-decoration:none; /* Tira qualquer estilo do texto */ 
+}
+
+body {
+
+    
+    background-image: url(../Projeto/imagens/mar.jpg);
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-position: center center; /* Centralizar a imagem */
+    background-attachment: fixed; /* Fundo fixo */
+    background-size: cover; /* Tamanho de fundo total */  
+    font-family: 'Bebas Neue', cursive, sans-serif;
+        
+       
+    
+}
+
+
+header{
+
+display: flex;    
+justify-content: space-around;
+align-items: center;
+padding: 10px;
+
+
+}
+
+header ul{
+
+    display: flex;
+    padding:10px
+}
+
+header ul li{
+
+    padding: 5px;
+    border-bottom: 2px dashed rgb(0, 0, 0); /* Borda tracejada embaixo*/
+    
+}
+
+header ul li a:hover {
+
+    color: rgb(36, 139, 143);
+    text-decoration: underline;
+    transition: 300ms;
+}
+
+h1,h5{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+
+text-align: center;
+}
+
+.formulario  {
+
+    width: 40%;
+    margin: 0 auto;
+    margin-top:30px;
+    
+}
+
+
+.formulario input{
+    
+   width:50%;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 10px 0px 0px 10px; /* Esquerda superior,direita superior, direita inferior, esquerda inferior */
+
+   
+}
+
+
+.formulario button{
+    width:15%;/* Largura da fonte */
+    padding: 5px 10px; /* Espaço da fonte */
+    background: linear-gradient(to right, rgb(156, 84, 12) 50%,rgb(207, 153, 99) 50%); /* Preenche o gradiente da esquerda para a direita sai de uma cor para a outra */
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: rgb(246, 246, 246);
+    font-weight: 600;  /* Peso da fonte */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Faz aparecer a Mão ao passar o mouse no botão */
+    transition: all 300ms ease-out; /* Transição lenta para fora */
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 5px; /* Margen no topo */
+    margin-left: -5px; /* Margen a direita */
+}
+
+.formulario button:hover {
+
+    background-position: left bottom;
+    
+}
+
+
+/* Criando responsividade para ipad */
+
+@media only screen and (max-width: 768px){
+
+    .formulario {
+
+        width: 100%; /*  Ajustando o formulário e o input para ipad*/
+
+
+    }
+
+   
+}
+
+
+
+
+
+
+
+/* Criando uma responsividade para celular */
+
+@media only screen and (max-width: 480px){ 
+    
+    .container .name h1 {
+
+        font-size: 30px;
+    }
+
+
+
+    .container .name h5{
+
+    font-size: 15px;
+
+        
+    }
+
+    #about p{
+
+    max-width: 80%; /* Maximo de largura 80% da tela para o texto */
+    text-align: justify; /* Texto alinhado justificado */
+        
+}
+
+
+}
+    
+
+
+
+/*  */
